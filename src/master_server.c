@@ -359,8 +359,9 @@ int main(int argc, char *argv[]) {
 	//socket_close (srv->server_socket);
 	
 	/* free the master server */
-	master_server_free (master_srv);
 	free (master_srv->config_file);
+	master_server_free (master_srv);
+
 	
 	printf (" * The server is down, exiting...\n");
 	
